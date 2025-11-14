@@ -9,7 +9,7 @@ export enum SettlementStatus {
 }
 
 @Schema({ timestamps: true })
-export class FinalSettlement extends Document {
+export class ExitSettlement extends Document {
   @Prop({ type: Types.ObjectId, ref: 'OffboardingPlan', required: true })
   offboardingPlanId: Types.ObjectId;
 
@@ -56,4 +56,4 @@ export class FinalSettlement extends Document {
   benefitsTerminationDate: Date;
 }
 
-export const FinalSettlementSchema = SchemaFactory.createForClass(FinalSettlement);
+export const ExitSettlementSchema = SchemaFactory.createForClass(ExitSettlement);
